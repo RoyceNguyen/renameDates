@@ -17,9 +17,14 @@ for muricaFilename in os.listdir('.'):
     mo = datePattern.search(muricaFilename)
 
 # Skip files without a date.
-if mo == None:
-    continue
-# TODO: Get the different parts of the filename.
+    if mo == None:
+        continue
+# Get the different parts of the filename.
+    beforePart = mo.groups(1)
+    monthPart = mo.groups(2)
+    dayPart = mo.groups(4)
+    yearPart = mo.groups(6)
+    afterPart = mo.groups(8)
 
 # TODO: Form the European-style filename.
 
