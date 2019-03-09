@@ -16,8 +16,9 @@ datePattern = re.compile(r"""^(.*?) # all text before the date
 for muricaFilename in os.listdir('.'):
     mo = datePattern.search(muricaFilename)
 
-# TODO: Skip files without a date.
-
+# Skip files without a date.
+if mo == None:
+    continue
 # TODO: Get the different parts of the filename.
 
 # TODO: Form the European-style filename.
