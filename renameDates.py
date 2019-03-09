@@ -26,8 +26,11 @@ for muricaFilename in os.listdir('.'):
     yearPart = mo.groups(6)
     afterPart = mo.groups(8)
 
-# TODO: Form the European-style filename.
+    euFilename = beforePart + dayPart + '-' + monthPart + '-' + yearPart + afterPart
 
-# TODO: Get the full, absolute file paths.
+    # Get the full, absolute file paths.
+    absWorkingDir = os.path.abspath('.')
+    muricaFilename = os.path.join(absWorkingDir, muricaFilename)
+    euFilename = os.path.join(absWorkingDir, euFilename)
 
 # TODO: Rename the files.
