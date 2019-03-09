@@ -33,4 +33,6 @@ for muricaFilename in os.listdir('.'):
     muricaFilename = os.path.join(absWorkingDir, muricaFilename)
     euFilename = os.path.join(absWorkingDir, euFilename)
 
-# TODO: Rename the files.
+# Rename the files.
+    print('Renaming "%s" to "%s"...' % (muricaFilename, euFilename))
+    # shutil.move(amerFilename, euroFilename)   # uncomment after testing if files are renamed correctly
