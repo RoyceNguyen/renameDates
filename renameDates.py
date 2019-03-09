@@ -12,7 +12,9 @@ datePattern = re.compile(r"""^(.*?) # all text before the date
        (.*?)$                          # all text after the date
        """, re.VERBOSE)
 
-# TODO: Loop over the files in the working directory.
+#  Loop over the files in the working directory.
+for muricaFilename in os.listdir('.'):
+    mo = datePattern.search(muricaFilename)
 
 # TODO: Skip files without a date.
 
